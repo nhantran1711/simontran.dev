@@ -8,8 +8,8 @@
     <meta name="color-scheme" content="light dark">
 
     <!-- Open Graph (social preview) -->
-    <meta property="og:title" content="Simon Tran -Software Engineer">
-    <meta property="og:description" content="Software Engineering student at Adelaide University. Portfolio, experience, and projects.">
+    <meta property="og:title" content="Simon Tran — Software Engineer">
+    <meta property="og:description" content="Software Engineering student at Adelaide University. Portfolio and projects.">
     <meta property="og:url" content="https://simontrandev.netlify.app">
     <meta property="og:type" content="website">
 
@@ -18,6 +18,7 @@
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="cursor-spotlight" id="cursor-spotlight" aria-hidden="true"></div>
 
     <!-- Icon sprite: no external icon library -->
     <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden" aria-hidden="true">
@@ -61,7 +62,7 @@
                 <a href="#home" class="nav__link" data-nav-link>Home</a>
                 <a href="#about" class="nav__link" data-nav-link>About</a>
                 <a href="#service" class="nav__link" data-nav-link>Skills</a>
-                <a href="#experience" class="nav__link" data-nav-link>Experience</a>
+                <a href="#leetcode" class="nav__link" data-nav-link>LeetCode</a>
                 <a href="#portfolio" class="nav__link" data-nav-link>Projects</a>
                 <a href="#contact" class="nav__link" data-nav-link>Contact</a>
                 <span class="nav__divider" aria-hidden="true"></span>
@@ -83,47 +84,23 @@
         <!-- Hero -->
         <section class="hero" id="home">
             <div class="container hero__inner">
-                <p class="hero__eyebrow mono">$ whoami</p>
-                <h1 class="hero__name">Simon Tran</h1>
-                <p class="hero__role">Software Engineering Student <span class="hero__role-sep">·</span> SWE Intern @ James Anthony Consulting</p>
-                <p class="hero__lede">
-                    Third-year software engineering student in Adelaide. I build full-stack and AI
-                    projects, and I'm pretty into competitive programming too.
-                </p>
-                <div class="hero__actions">
-                    <a class="btn btn--primary" href="#contact">Get in touch</a>
-                </div>
-                <ul class="hero__meta mono">
-                    <li>Adelaide, Australia</li>
-                    <li>B.SWE (Hons), 3rd Year</li>
-                    <li>Open to opportunities</li>
-                </ul>
+                <h1 class="hero__name" data-scramble>Simon Tran</h1>
+                <p class="hero__role" data-scroll-text>Software Engineering Student</p>
             </div>
+            <a href="#about" class="hero__scroll-cue" aria-label="Scroll to content">
+                <svg width="22" height="22" class="icon-flip"><use href="#icon-chevron-up"/></svg>
+            </a>
         </section>
 
         <!-- About -->
         <section class="section" id="about">
             <div class="container about">
                 <div class="about__content" data-reveal>
-                    <p class="section-eyebrow mono">About me</p>
-                    <h2 class="section-title">Bachelor of Software Engineering (Honours)</h2>
-                    <p>
-                        I'm a third-year Bachelor of Software Engineering student at Adelaide University,
-                        based in Adelaide and always down to learn something new.
-                    </p>
-                    <p>
-                        Right now I'm interning as a <strong>Software Engineer at James Anthony
-                        Consulting</strong>, working across React Native and Django to build a
-                        compliance platform end to end.
-                    </p>
-                    <p>
-                        I also lead <strong>Peer Assisted Study Sessions</strong> for first and
-                        second-year students, and previously interned at InnovateAI building backend
-                        automation with C# and PostgreSQL.
-                    </p>
-                    <p>
-                        Outside of that, I'm usually deep in a side project or grinding competitive
-                        programming problems for fun.
+                    <p class="section-eyebrow mono">About</p>
+                    <h2 class="section-title">Code by day, LeetCode by night.</h2>
+                    <p data-scroll-text>
+                        I like building things that work, breaking things that don't, and
+                        occasionally arguing with a compiler until it agrees with me.
                     </p>
                 </div>
             </div>
@@ -135,163 +112,130 @@
                 <header class="section-head" data-reveal>
                     <p class="section-eyebrow mono">Skills</p>
                     <h2 class="section-title">Languages, frameworks &amp; tools</h2>
+                    <p class="section-note mono">// drag them around</p>
                 </header>
 
-                <div class="skills-grid">
-                    <div class="skill-group" data-reveal>
-                        <h3 class="skill-group__title mono">Languages</h3>
-                        <ul class="tag-list">
-                            <li class="tag">Python</li>
-                            <li class="tag">JavaScript</li>
-                            <li class="tag">TypeScript</li>
-                            <li class="tag">Java</li>
-                            <li class="tag">C++17</li>
-                            <li class="tag">C#</li>
-                            <li class="tag">SQL</li>
-                            <li class="tag">HTML/CSS</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-group" data-reveal>
-                        <h3 class="skill-group__title mono">Frameworks &amp; libraries</h3>
-                        <ul class="tag-list">
-                            <li class="tag">React</li>
-                            <li class="tag">React Native</li>
-                            <li class="tag">Django</li>
-                            <li class="tag">Node.js</li>
-                            <li class="tag">PyTorch</li>
-                            <li class="tag">Three.js</li>
-                            <li class="tag">ASP.NET</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-group" data-reveal>
-                        <h3 class="skill-group__title mono">Databases</h3>
-                        <ul class="tag-list">
-                            <li class="tag">PostgreSQL</li>
-                            <li class="tag">MySQL</li>
-                            <li class="tag">MongoDB</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-group" data-reveal>
-                        <h3 class="skill-group__title mono">Tools &amp; platforms</h3>
-                        <ul class="tag-list">
-                            <li class="tag">Git</li>
-                            <li class="tag">Docker</li>
-                            <li class="tag">Kubernetes</li>
-                            <li class="tag">Terraform</li>
-                            <li class="tag">AWS</li>
-                            <li class="tag">REST APIs</li>
-                            <li class="tag">Linux</li>
-                            <li class="tag">CI/CD</li>
-                        </ul>
-                    </div>
+                <div class="phys-arena" id="phys-arena" data-reveal>
+                    <span class="tag phys-tag">Python</span>
+                    <span class="tag phys-tag">JavaScript</span>
+                    <span class="tag phys-tag">TypeScript</span>
+                    <span class="tag phys-tag">Java</span>
+                    <span class="tag phys-tag">C++17</span>
+                    <span class="tag phys-tag">C#</span>
+                    <span class="tag phys-tag">SQL</span>
+                    <span class="tag phys-tag">HTML/CSS</span>
+                    <span class="tag phys-tag">React</span>
+                    <span class="tag phys-tag">React Native</span>
+                    <span class="tag phys-tag">Django</span>
+                    <span class="tag phys-tag">Node.js</span>
+                    <span class="tag phys-tag">PyTorch</span>
+                    <span class="tag phys-tag">Three.js</span>
+                    <span class="tag phys-tag">ASP.NET</span>
+                    <span class="tag phys-tag">PostgreSQL</span>
+                    <span class="tag phys-tag">MySQL</span>
+                    <span class="tag phys-tag">MongoDB</span>
+                    <span class="tag phys-tag">Git</span>
+                    <span class="tag phys-tag">Docker</span>
+                    <span class="tag phys-tag">Kubernetes</span>
+                    <span class="tag phys-tag">Terraform</span>
+                    <span class="tag phys-tag">AWS</span>
+                    <span class="tag phys-tag">REST APIs</span>
+                    <span class="tag phys-tag">Linux</span>
+                    <span class="tag phys-tag">CI/CD</span>
                 </div>
+                <ul class="visually-hidden">
+                    <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Java</li><li>C++17</li>
+                    <li>C#</li><li>SQL</li><li>HTML/CSS</li><li>React</li><li>React Native</li>
+                    <li>Django</li><li>Node.js</li><li>PyTorch</li><li>Three.js</li><li>ASP.NET</li>
+                    <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Git</li><li>Docker</li>
+                    <li>Kubernetes</li><li>Terraform</li><li>AWS</li><li>REST APIs</li><li>Linux</li><li>CI/CD</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Experience -->
-        <section class="section" id="experience">
+        <!-- LeetCode -->
+        <section class="section" id="leetcode">
             <div class="container">
                 <header class="section-head" data-reveal>
-                    <p class="section-eyebrow mono">Experience</p>
-                    <h2 class="section-title">Experience &amp; achievements</h2>
+                    <p class="section-eyebrow mono">Competitive programming</p>
+                    <h2 class="section-title">LeetCode</h2>
+                    <p>
+                        725 problems in, mostly for fun and to stay sharp on algorithms and data structures
+                        between projects.
+                    </p>
                 </header>
 
-                <ol class="timeline">
-                    <li class="timeline__item" data-reveal>
-                        <div class="timeline__date mono">Aug 2026 – Present</div>
-                        <div class="timeline__body">
-                            <h3>Software Engineer Intern</h3>
-                            <p class="timeline__org">James Anthony Consulting, Adelaide, SA</p>
-                            <ul>
-                                <li>Building an aged-care compliance platform end to end — React Native on the front end, Django on the back.</li>
-                                <li>Writing tests, chasing down bugs, and shaping the data models and API contracts along the way.</li>
-                            </ul>
-                        </div>
-                    </li>
+                <div class="lc-stats" data-reveal>
+                    <div class="lc-stat">
+                        <span class="lc-stat__value mono" data-count>725</span>
+                        <span class="lc-stat__label mono">Solved</span>
+                    </div>
+                    <div class="lc-stat">
+                        <span class="lc-stat__value mono" data-count>231</span>
+                        <span class="lc-stat__label mono">Easy</span>
+                    </div>
+                    <div class="lc-stat">
+                        <span class="lc-stat__value mono" data-count>412</span>
+                        <span class="lc-stat__label mono">Medium</span>
+                    </div>
+                    <div class="lc-stat">
+                        <span class="lc-stat__value mono" data-count>82</span>
+                        <span class="lc-stat__label mono">Hard</span>
+                    </div>
+                    <div class="lc-stat">
+                        <span class="lc-stat__value mono" data-count>87,211</span>
+                        <span class="lc-stat__label mono">Global rank</span>
+                    </div>
+                </div>
 
-                    <li class="timeline__item" data-reveal>
-                        <div class="timeline__date mono">Jun 2025 – Sep 2025</div>
-                        <div class="timeline__body">
-                            <h3>Software Engineer Intern</h3>
-                            <p class="timeline__org">InnovateAI, Adelaide, SA</p>
-                            <ul>
-                                <li>Built backend automation with C# and REST APIs to cut out manual admin work.</li>
-                                <li>Tuned PostgreSQL queries and backend logic to speed up a B2B SaaS platform.</li>
-                            </ul>
-                        </div>
-                    </li>
+                <div class="lc-bar mono" aria-hidden="true">
+                    <span class="lc-bar__seg lc-bar__seg--easy" style="width: 31.9%"></span>
+                    <span class="lc-bar__seg lc-bar__seg--medium" style="width: 56.8%"></span>
+                    <span class="lc-bar__seg lc-bar__seg--hard" style="width: 11.3%"></span>
+                </div>
 
-                    <li class="timeline__item" data-reveal>
-                        <div class="timeline__date mono">Jan 2025 – Present</div>
-                        <div class="timeline__body">
-                            <h3>Peer Assisted Study Session Leader</h3>
-                            <p class="timeline__org">Adelaide University, Adelaide, SA</p>
-                            <ul>
-                                <li>Run weekly sessions helping students get unstuck on algorithms, recursion, and debugging in Java, Python, and C#.</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="timeline__item" data-reveal>
-                        <div class="timeline__date mono">Oct 2025 – Present</div>
-                        <div class="timeline__body">
-                            <h3>Adelaide University Competitive Programming League</h3>
-                            <ul>
-                                <li>Team-based, ICPC-style contests. Graph theory, DP, and a lot of whiteboard scribbling. Ranked top 3% of participants.</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ol>
+                <a class="project-card__link" href="https://leetcode.com/u/simontran1711/" target="_blank" rel="noopener">
+                    View profile <svg width="14" height="14"><use href="#icon-arrow"/></svg>
+                </a>
             </div>
         </section>
 
         <!-- Projects -->
-        <section class="section section--alt" id="portfolio">
+        <section class="section" id="portfolio">
             <div class="container">
                 <header class="section-head" data-reveal>
                     <p class="section-eyebrow mono">Projects</p>
-                    <h2 class="section-title">Some of my projects</h2>
+                    <h2 class="section-title" data-scroll-text>Some of my projects</h2>
                 </header>
 
                 <div class="project-grid">
                     <article class="project-card" data-reveal>
-                        <div class="project-card__image">
-                            <img src="img/global.png" alt="GlobalGuard" loading="lazy">
-                        </div>
-                        <div class="project-card__body">
-                            <h3>GlobalGuard</h3>
-                            <p>A 3D globe that tracks live disaster events in real time, pulled straight from NASA's EONET API.</p>
-                            <p class="project-card__stack mono">React · Three.js · Node · MongoDB · Docker · Kubernetes</p>
-                            <a class="project-card__link" href="https://github.com/nhantran1711/3ddisasteralertvisualization" target="_blank" rel="noopener">
-                                View on GitHub <svg width="14" height="14"><use href="#icon-arrow"/></svg>
-                            </a>
-                        </div>
+                        <h3>GlobalGuard</h3>
+                        <p>A 3D globe that tracks live disaster events in real time, pulled straight from NASA's EONET API.</p>
+                        <p class="project-card__stack mono">React · Three.js · Node · MongoDB · Docker · Kubernetes</p>
+                        <a class="project-card__link" href="https://github.com/nhantran1711/3ddisasteralertvisualization" target="_blank" rel="noopener">
+                            View on GitHub <svg width="14" height="14"><use href="#icon-arrow"/></svg>
+                        </a>
                     </article>
 
                     <article class="project-card" data-reveal>
-                        <div class="project-card__image"></div>
-                        <div class="project-card__body">
-                            <h3>StyleFusion</h3>
-                            <p>A neural style transfer app that turns any photo into art, powered by a pretrained VGG19 model.</p>
-                            <p class="project-card__stack mono">Python · PyTorch · Streamlit · Docker · AWS</p>
-                            <a class="project-card__link" href="https://github.com/nhantran1711/image_transfer_style" target="_blank" rel="noopener">
-                                View on GitHub <svg width="14" height="14"><use href="#icon-arrow"/></svg>
-                            </a>
-                        </div>
+                        <h3>StyleFusion</h3>
+                        <p>A neural style transfer app that turns any photo into art, powered by a pretrained VGG19 model.</p>
+                        <p class="project-card__stack mono">Python · PyTorch · Streamlit · Docker · AWS</p>
+                        <a class="project-card__link" href="https://github.com/nhantran1711/image_transfer_style" target="_blank" rel="noopener">
+                            View on GitHub <svg width="14" height="14"><use href="#icon-arrow"/></svg>
+                        </a>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section class="section" id="contact">
+        <section class="section section--alt" id="contact">
             <div class="container contact">
                 <header class="section-head" data-reveal>
                     <p class="section-eyebrow mono">Get in touch</p>
-                    <h2 class="section-title">Let's talk</h2>
+                    <h2 class="section-title" data-scroll-text>Let's talk</h2>
                     <p class="contact__lede">
                         Based in Adelaide, South Australia. Open to internships and graduate opportunities.
                         Email is the fastest way to reach me.
@@ -353,3 +297,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+</content>
+</invoke>
