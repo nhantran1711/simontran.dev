@@ -105,6 +105,55 @@
             ".X...X...",
             "..XXX...."
         ],
+        briefcase: [
+            "...XXX...",
+            "..X...X..",
+            "XXXXXXXXX",
+            "X.......X",
+            "XXXX.XXXX",
+            "X...X...X",
+            "X.......X",
+            "XXXXXXXXX"
+        ],
+        book: [
+            ".XXX.XXX.",
+            "X...X...X",
+            "X.X.X.X.X",
+            "X...X...X",
+            "X.X.X.X.X",
+            "X...X...X",
+            "XXXXXXXXX"
+        ],
+        trophy: [
+            "XXXXXXXXX",
+            "X.XXXXX.X",
+            "X.XXXXX.X",
+            ".XXXXXXX.",
+            "..XXXXX..",
+            "...XXX...",
+            "....X....",
+            "...XXX...",
+            "..XXXXX.."
+        ],
+        chart: [
+            "X......X.",
+            "X.....XXX",
+            "X.....XX.",
+            "X.X..X...",
+            "X.XXX....",
+            "X..X.....",
+            "X........",
+            "XXXXXXXXX"
+        ],
+        cap: [
+            "....X....",
+            "..XXXXX..",
+            "XXXXXXXXX",
+            "..XXXXX..",
+            "..X...X.X",
+            "..XXXXX.X",
+            "........X"
+        ],
         flag: [
             "X........",
             "XXXXX....",
