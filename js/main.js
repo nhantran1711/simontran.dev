@@ -154,6 +154,15 @@
             "..XXXXX.X",
             "........X"
         ],
+        gamepad: [
+            ".XXXXXXXXX.",
+            "X.........X",
+            "X.X....X..X",
+            "XXXX..X.X.X",
+            "X.X....X..X",
+            "X..XXXXX..X",
+            ".XX.....XX."
+        ],
         flag: [
             "X........",
             "XXXXX....",
