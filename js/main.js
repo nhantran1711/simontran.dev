@@ -154,6 +154,18 @@
             "..XXXXX.X",
             "........X"
         ],
+        cube: [
+            "XXXXXXXXXX",
+            "X..X..X..X",
+            "X..X..X..X",
+            "XXXXXXXXXX",
+            "X..X..X..X",
+            "X..X..X..X",
+            "XXXXXXXXXX",
+            "X..X..X..X",
+            "X..X..X..X",
+            "XXXXXXXXXX"
+        ],
         gamepad: [
             ".XXXXXXXXX.",
             "X.........X",
